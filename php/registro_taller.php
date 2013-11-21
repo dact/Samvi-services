@@ -30,18 +30,24 @@
 					descripcion_taller
 					) 
 					VALUES (
-					:cedula,
-					:nombres,
-					:apellidos,
+					:nitTaller,
+					:nombre,
+					:nickTaller,
+					:clave,
+					:telefono,
+					:direccion,
 					:correo,
-					:clave
+					:descripcion
 					 )");
 
-			$sqlusuario->bindParam(':cedula', $cedula);
-			$sqlusuario->bindParam(':nombres', $nombres);
-			$sqlusuario->bindParam(':apellidos', $apellidos);
+			$sqlusuario->bindParam(':nitTaller', $nitTaller);
+			$sqlusuario->bindParam(':nombre', $nombre);
+			$sqlusuario->bindParam(':nickTaller', $nickTaller);
 			$sqlusuario->bindParam(':correo', $correo);
 			$sqlusuario->bindParam(':clave', $clave);
+			$sqlusuario->bindParam(':telefono', $telefono);
+			$sqlusuario->bindParam(':direccion', $direccion);
+			$sqlusuario->bindParam(':descripcion', $descripcion);
 			$sqlusuario->execute();
 			
 			$resultados["validacion"] = "ok";
